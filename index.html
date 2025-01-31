@@ -16,20 +16,20 @@
             border-width:2px;
         }
 
-        highlighter {
+        highlighter-text{
             display: block;
             font-size: 1rem;
         }
 
-        highlighter[highlighter-color="yellow"]{
+        highlighter-text[highlighter-color="yellow"]{
             background-color: #FFFF00; 
         }
 
-        highlighter[highlighter-color="pink"]{
+        highlighter-text[highlighter-color="pink"]{
             background-color: #ff1493; 
         }
 
-        highlighter[highlighter-color="blue"]{
+        highlighter-text[highlighter-color="blue"]{
             background-color: #3aafdc; 
         }
     </style>
@@ -39,7 +39,7 @@
         constructor() {
         super();
         this.attachShadow({ mode: "open" }); // Attach shadow DOM
-        this.shadowRoot.innerHTML = `<p>Hello, World! 👋</p>`; // Set inner HTML
+        this.shadowRoot.innerHTML = `<p>Hello, World!</p>`; // Set inner HTML
         }
     }
 
@@ -92,15 +92,17 @@
                 In my free time, I love hitting the <b>gym</b>, exploring <b>coffee shops</b>, <b>discovering</b> new restaurants, <b>traveling</b>, and <b>cooking</b> fresh recipes.
             <p>
         </section>
+
+        <search>
+            <form>
+              <input name="search" id="search" placeholder="Search Jobs">
+            </form>
+        </search>
+    
     </header>
 
     <hr>
 
-    <search>
-        <form>
-          <input name="search" id="search" placeholder="Search Jobs">
-        </form>
-      </search>
     <main id="experience">
 
         <h1>Experience</h1>
@@ -213,6 +215,6 @@
 
         <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> save site as HTML!.</p>
     </footer>
-    <highlighter highlighter-color="blue">Highlighted</highlighter> 
+    <highlighter-text highlighter-color="blue">Highlighted</highlighter-text> 
 </body>
 </html>
