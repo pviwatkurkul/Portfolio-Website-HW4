@@ -8,13 +8,58 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <style>
-        p{
-            font-family: "Space Grotesk", serif;
-        }
         nav{
             display:inline-block;
         }
     </style>
+
+    <script>
+    class HelloWorld extends HTMLElement {
+        constructor() {
+        super();
+        this.attachShadow({ mode: "open" }); // Attach shadow DOM
+        this.shadowRoot.innerHTML = `<p>Hello, World! 👋</p>`; // Set inner HTML
+        }
+    }
+
+    customElements.define("hello-world", HelloWorld);
+    </script>
+
+    <script>
+        // Define a new custom element
+        class highlighter extends HTMLElement {
+        constructor() {
+            super(); 
+            const shadow = this.attachShadow({ mode: "open" }); 
+            
+            const p = document.createElement("p");
+            p.textContent = this.textContent; 
+
+            const style = document.createElement("style");
+            style.textContent = `
+            p {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #007bff;
+                text-transform: uppercase;
+                background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+                padding: 10px;
+                border-radius: 5px;
+                text-align: center;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            `;
+
+            // Append styles and the paragraph to shadow DOM
+            shadow.appendChild(style);
+            shadow.appendChild(p);
+        }
+        }
+
+        // Register the custom element
+        customElements.define("styled-paragraph", StyledParagraph);
+    </script>
+
 </head>
 <body>
     <nav>
@@ -36,6 +81,8 @@
         </ul>
     </aside>
     <header id="about-me">
+        <hello-world></hello-world>
+
         <h1> Purich Viwatkurkul
         </h1>
         <h2>
@@ -46,35 +93,105 @@
         </h3>
         <section>
             <p>
-                Hi! I’m Purich Viwatkurkul, a senior at UC San Diego majoring in Mathematics-Computer Science, with a strong <i>passion</i> in <em>developing user-centric </em>software and contributing to industries like medicine, automotive, video games, and desktop/mobile apps. 
+                Hi! I’m Purich Viwatkurkul, a senior at <strong>UC San Diego</strong> majoring in Mathematics-Computer Science, with a strong <i>passion</i> in <em>developing user-centric </em>software and contributing to industries like medicine, automotive, video games, and desktop/mobile apps. 
                 <br>
-                I'm also apart of the biggest computing organization at my university named <strong>ACM @ UCSD</strong>. I specialize in directing and coordinating our student software engineering development program where 60+ students a quarter form groups to build MERN projects over 10 weeks. I'm also involved with developing and leading workshops that teach relevant UIUX/SWE topics for beginners trying to learn more about industry standards. 
+                I'm also apart of the biggest computing organization at my university named <abbr>ACM</abbr> (Association for Computing Machinery) @ UCSD. I am a <dfn> Project Development Lead </dfn> which specializes in directing and coordinating our student software engineering development program where 60+ students a quarter form groups to build MERN projects over 10 weeks. I'm also involved with developing and leading workshops that teach relevant UIUX/SWE topics for beginners trying to learn more about industry standards. 
                 <br>
                 In my free time, I love hitting the <b>gym</b>, exploring <b>coffee shops</b>, <b>discovering</b> new restaurants, <b>traveling</b>, and <b>cooking</b> fresh recipes.
             <p>
         </section>
     </header>
-    <hr>
-    <main id="experience">
-        <h1>Experience</h1>
-        <div>
 
+    <hr>
+
+    <main id="experience">
+        <search>
+            <form>
+              <input name="search" id="search" placeholder="Search Jobs">
+            </form>
+          </search>
+        <h1>Experience</h1>
+        <div id="experience-one">
+            <h3>Web Developer Intern - Data Science Alliance</h3>
+            <ol>
+                <li>
+                    Reconstructed the organization’s website using HTML/CSS and JavaScript, building 5 web pages and improving page load speed by 20% while enhancing mobile responsiveness for an optimized user experience.
+                </li>
+                <li>
+                    Developed APIs from scratch and integrated Stripe and Zapier to automate payment processing and workflow
+                    management, while migrating code from Webflow to Hostinger.
+                </li>
+                <li>
+                    Spearheaded collaborative testing and project management efforts with a team of 4 interns using GitHub,
+                    implementing version control best practices and resolving 100% of reported issues within 2 week sprint deadlines.
+                </li>
+            </ol>
+        </div>
+        <div id="experience-two">
+            <h3>Computing Support Tech - UCSD Extended Studies</h3>
+            <ol>
+                <li>
+                    Managed and maintained 500+ devices using Lansweeper and Hostmaint, proactively identifying and resolving hardware issues to ensure uninterrupted operations.
+                </li>
+                <li>
+                    Installed, configured, and monitored server services and applications, leveraging tools to maintain a 99% uptime across mission-critical systems.
+                </li>
+                <li>
+                    Provided technical support to 50+ clients monthly via ServiceNow, resolving issues within an average of 24 hours and achieving a 95% client satisfaction rate.
+                </li>
+            </ol>
         </div>
     </main>
+    <hr>
+
     <div id="projects">
         <h1>Projects</h1>
-        <div class="project" style="border-color:black; border-style:solid; border-width:2px;">
-            <iframe srcdoc="Image to be Added" title="projectoneanddone">
-            </iframe>
-            <h2>
-                One and Done
-            </h2>
-        </div>
+        <table>
+            <caption>Previous Web Dev Projects</caption>
+            <colgroup>
+                <col/>
+                <col/>
+                <col/>
+            </colgroup>
+            <tr>
+                <th scope="col">
+                    One and Done
+                </th>
+                <th  scope="col">
+                    Data Science Alliance
+                </th >
+                <th  scope="col">
+                    TripSmart
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <div id="projectOne" style="border-color:black; border-style:solid; border-width:2px;">
+                        <iframe srcdoc="Image to be Added" title="projectoneanddone">
+                        </iframe>
+
+                    </div>
+                </td>
+                <td>
+                    <div id="projectTwo" style="border-color:black; border-style:solid; border-width:2px;">
+                        <img src="assets/dsa.png" width="300px" height="200px"/>
+                    </div>
+                </td>
+                <td>
+                    <div id="projectThree" style="border-color:black; border-style:solid; border-width:2px;">
+                        <picture>
+                            <source srcset="assets/tripsmart.png" media="(orientation: landscape)" />
+                            <img src="assets/tripsmart.png" alt="reactimage" />
+                          </picture>        
+                    </div>                   
+                </td>
+            </tr>
+        </table>
     </div>
 
+    <hr>
 
     <footer>
-
         <details>
             <summary>
                 Want to know my favorite color?
@@ -88,6 +205,15 @@
             </summary>
             <code>x - 5 = 16</code>
         </details>
+
+        <address>
+            Developed by Purich Viwatkurkul<br> 
+            <a href="mailto:pviwatkurkul@ucsd.edu">pviwatkurkul@ucsd.edu</a> <br>
+            San Diego, USA
+        </address>
+
+        <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> save site as HTML!.</p>
+
     </footer>
 </body>
 </html>

@@ -3,9 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Me</title>
 </head>
 <body>
+    <h1>
+        Contact Me
+    </h1>
+
+    <dialog open>
+        <form method="dialog" autocomplete="on">
+            <fieldset>
+                <legend>Let me know who you are leave a message!</legend>
+                <label for="name">What's your name?</label>
+                <input id="name" type="text" name="name" required/>
+                <label for="inquiry">Reason For Contact:</label>
+                <select id="inquiry" required>
+                <optgroup label="Background">
+                    <option>Hiring Manager</option>
+                    <option>Recruiter</option>
+                    <option>Company Employee</option>
+                    <option>Visitor</option>
+                </optgroup>
+                </select>
+
+                <label for="contact-reasons">Reason for Contact:</label>
+                <input list="contact-reasons" name="contact-choice" required />
+                <datalist id="contact-reasons" required >
+                    <option value="General Inquiry"></option>
+                    <option value="Collaboration Opportunity"></option>
+                    <option value= "Job Opportunity"></option>
+                    <option value= "Freelance Work"></option>
+                </datalist>
+
+                <label for="message">Leave a Message!</label>
+
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+                <button type="submit" id="closeDialog">Submit</button>
+
+            </fieldset>
+        </form>
+    </dialog>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(85, 85, 5, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(115, 85, 5, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(100, 110, 25, 0.2 * Math.PI, 0.8 * Math.PI);
+        ctx.stroke();
+    </script>
+
+    <noscript>
+        <p>Smiley Face Inserted Here!</p>
+    </noscript>
     
+    <hgroup>
+        <h1>Do not go gentle into that good night</h1>
+        <p>By: Dylan Thomas</p>
+    </hgroup>
+
+    <dl>
+        <dt>Do not go gentle into that good night,</dt>
+        <dd>Old age should burn and rave at close of day;</dd>
+
+        <dt>Rage, rage against the dying of the light.</dt>
+        <dd>Do not go gentle into that good night.</dd>
+    </dl>
+    <hr>
+    <figure>
+        <img src="assets/interstellar.jpeg" alt="interstellar"/>
+        <figcaption>My Favorite Movie!</figcaption>
+    </figure>
+
+    <audio controls>
+        <source src="assets/chase.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <blockquote cite="https://www.goodreads.com/quotes/2212546-yesterday-is-history-tomorrow-is-a-mystery-and-today-is">
+        <p>“Yesterday is history,
+            tomorrow is a mystery,
+            and today is a gift...
+            that's why they call it present”
+            <cite>-Master Oogway</cite></p>
+      </blockquote>
+    <hr>
+    <footer>
+        <address>
+            Developed by Purich Viwatkurkul<br> 
+            <a href="mailto:pviwatkurkul@ucsd.edu">pviwatkurkul@ucsd.edu</a> <br>
+            San Diego, USA
+        </address>
+        <br>
+        <b>Change Log:</b>
+        <del>
+            <p>Removed fonts</p>
+        </del>
+        <ins>
+        <p>Added finishing touches and bug fixes for validator</p>
+        </ins>
+
+    </footer>
 </body>
 </html>
