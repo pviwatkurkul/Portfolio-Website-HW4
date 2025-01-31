@@ -21,6 +21,7 @@
 
             <label for="inquiry">Background Role</label>
             <select id="inquiry" required>
+                <option value="" disabled selected>Select a role</option> 
             <optgroup label="Background">
                 <option>Hiring Manager</option>
                 <option>Recruiter</option>
@@ -29,9 +30,9 @@
             </optgroup>
             </select>
 
-            <label for="contact-reasons">Reasons for Contact:</label>
-            <input list="contact-reasons" name="contact-choice" required />
-            <datalist id="contact-reasons" required >
+            <label for="contact-choice">Reasons for Contact:</label>
+            <input list="contact-reasons" name="contact-choice" id="contact-choice" required />
+            <datalist id="contact-reasons" >
                 <option value="General Inquiry"></option>
                 <option value="Collaboration Opportunity"></option>
                 <option value= "Job Opportunity"></option>
