@@ -4,50 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
+    <style>
+    </style>
 </head>
 <body>
     <h1>
         Contact Me
     </h1>
 
-    <dialog open>
-        <form method="dialog" autocomplete="on">
-            <fieldset>
-                <legend>Let me know who you are leave a message!</legend>
-                <label for="name">What's your name?</label>
-                <input id="name" type="text" name="name" required/>
-                <label for="inquiry">Reason For Contact:</label>
-                <select id="inquiry" required>
-                <optgroup label="Background">
-                    <option>Hiring Manager</option>
-                    <option>Recruiter</option>
-                    <option>Company Employee</option>
-                    <option>Visitor</option>
-                </optgroup>
-                </select>
+    <form autocomplete="on">
+        <fieldset>
+            <legend>Let me know who you are leave a message!</legend>
 
-                <label for="contact-reasons">Reason for Contact:</label>
-                <input list="contact-reasons" name="contact-choice" required />
-                <datalist id="contact-reasons" required >
-                    <option value="General Inquiry"></option>
-                    <option value="Collaboration Opportunity"></option>
-                    <option value= "Job Opportunity"></option>
-                    <option value= "Freelance Work"></option>
-                </datalist>
+            <label for="name">What's your name?</label>
+            <input id="name" type="text" name="name" required/>
 
-                <label for="message">Leave a Message!</label>
+            <label for="inquiry">Background Role</label>
+            <select id="inquiry" required>
+            <optgroup label="Background">
+                <option>Hiring Manager</option>
+                <option>Recruiter</option>
+                <option>Company Employee</option>
+                <option>Visitor</option>
+            </optgroup>
+            </select>
 
-                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            <label for="contact-reasons">Reasons for Contact:</label>
+            <input list="contact-reasons" name="contact-choice" required />
+            <datalist id="contact-reasons" required >
+                <option value="General Inquiry"></option>
+                <option value="Collaboration Opportunity"></option>
+                <option value= "Job Opportunity"></option>
+                <option value= "Freelance Work"></option>
+            </datalist>
 
-                <button type="submit" id="closeDialog">Submit</button>
+            <label for="message">Leave a Message!</label>
 
-            </fieldset>
-        </form>
-    </dialog>
-    <canvas id="myCanvas" width="200" height="200"></canvas>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+            <button type="submit" id="closeDialog">Submit</button>
+
+        </fieldset>
+    </form>
+
+
+    <canvas id="canvas" ></canvas>
 
     <script>
-        var c = document.getElementById("myCanvas");
+        var c = document.getElementById("canvas");
         var ctx = c.getContext("2d");
 
         ctx.beginPath();
@@ -70,7 +74,7 @@
     <noscript>
         <p>Smiley Face Inserted Here!</p>
     </noscript>
-    
+
     <hgroup>
         <h1>Do not go gentle into that good night</h1>
         <p>By: Dylan Thomas</p>
@@ -94,6 +98,11 @@
         Your browser does not support the audio element.
     </audio>
 
+    <video controls>
+        <source src="assets/blackhole.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <blockquote cite="https://www.goodreads.com/quotes/2212546-yesterday-is-history-tomorrow-is-a-mystery-and-today-is">
         <p>“Yesterday is history,
             tomorrow is a mystery,
@@ -109,6 +118,21 @@
             San Diego, USA
         </address>
         <br>
+        <p>
+            <math display="block">
+                <mrow>
+                    <mi>E</mi>
+                    <mo>=</mo>
+                    <msup>
+                        <mi>mc</mi>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+            </math>
+        </p>
+            
+
+
         <b>Change Log:</b>
         <del>
             <p>Removed fonts</p>
@@ -117,6 +141,13 @@
         <p>Added finishing touches and bug fixes for validator</p>
         </ins>
 
+        <dialog open>
+            <form method="dialog">
+                <button>
+                    Click to Close
+                </button>
+            </form>
+        </dialog>
     </footer>
 </body>
 </html>

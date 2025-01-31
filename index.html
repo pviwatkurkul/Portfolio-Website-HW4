@@ -3,13 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio Website">
+    <meta name="keywords" content="Portfolio,HTML,CSS,JavaScript,UI,UX,Developer, Web">
     <title>Purich's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <style>
-        nav{
-            display:inline-block;
+        #projectOne,#projectTwo,#projectThree{
+            border-color:black; 
+            border-style:solid; 
+            border-width:2px;
+        }
+
+        highlighter {
+            display: block;
+            font-size: 1rem;
+        }
+
+        highlighter[highlighter-color="yellow"]{
+            background-color: #FFFF00; 
+        }
+
+        highlighter[highlighter-color="pink"]{
+            background-color: #ff1493; 
+        }
+
+        highlighter[highlighter-color="blue"]{
+            background-color: #3aafdc; 
         }
     </style>
 
@@ -25,51 +46,22 @@
     customElements.define("hello-world", HelloWorld);
     </script>
 
-    <script>
-        // Define a new custom element
-        class highlighter extends HTMLElement {
-        constructor() {
-            super(); 
-            const shadow = this.attachShadow({ mode: "open" }); 
-            
-            const p = document.createElement("p");
-            p.textContent = this.textContent; 
-
-            const style = document.createElement("style");
-            style.textContent = `
-            p {
-                font-size: 1.2rem;
-                font-weight: bold;
-                color: #007bff;
-                text-transform: uppercase;
-                background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-                padding: 10px;
-                border-radius: 5px;
-                text-align: center;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            }
-            `;
-
-            // Append styles and the paragraph to shadow DOM
-            shadow.appendChild(style);
-            shadow.appendChild(p);
-        }
-        }
-
-        // Register the custom element
-        customElements.define("styled-paragraph", StyledParagraph);
-    </script>
-
 </head>
 <body>
     <nav>
-        <a href="https://www.linkedin.com/in/purich-viwatkurkul/">LinkedIn</a>
-        <a href="https://github.com/pviwatkurkul">Github</a>
-        <button>
-            <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="currentColor" fill-rule="evenodd" d="M277.333 405.333v85.333h-42.667v-85.333zm99.346-58.824l60.34 60.34l-30.17 30.17l-60.34-60.34zm-241.359 0l30.17 30.17l-60.34 60.34l-30.17-30.17zM256 139.353c64.422 0 116.647 52.224 116.647 116.647c0 64.422-52.225 116.647-116.647 116.647A116.427 116.427 0 0 1 139.352 256c0-64.423 52.225-116.647 116.648-116.647m0 42.666c-40.859 0-73.981 33.123-73.981 74.062a73.76 73.76 0 0 0 21.603 52.296c13.867 13.867 32.685 21.64 52.378 21.603zm234.666 52.647v42.667h-85.333v-42.667zm-384 0v42.667H21.333v-42.667zM105.15 74.98l60.34 60.34l-30.17 30.17l-60.34-60.34zm301.7 0l30.169 30.17l-60.34 60.34l-30.17-30.17zM277.332 21.333v85.333h-42.667V21.333z"/></svg>
-            </span>
-        </button>
+        <span>
+            <a href="https://www.linkedin.com/in/purich-viwatkurkul/">LinkedIn</a>
+        </span>
+        <span>
+            <a href="https://github.com/pviwatkurkul">Github</a>
+        </span>
+        <span>
+            <button>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="currentColor" fill-rule="evenodd" d="M277.333 405.333v85.333h-42.667v-85.333zm99.346-58.824l60.34 60.34l-30.17 30.17l-60.34-60.34zm-241.359 0l30.17 30.17l-60.34 60.34l-30.17-30.17zM256 139.353c64.422 0 116.647 52.224 116.647 116.647c0 64.422-52.225 116.647-116.647 116.647A116.427 116.427 0 0 1 139.352 256c0-64.423 52.225-116.647 116.648-116.647m0 42.666c-40.859 0-73.981 33.123-73.981 74.062a73.76 73.76 0 0 0 21.603 52.296c13.867 13.867 32.685 21.64 52.378 21.603zm234.666 52.647v42.667h-85.333v-42.667zm-384 0v42.667H21.333v-42.667zM105.15 74.98l60.34 60.34l-30.17 30.17l-60.34-60.34zm301.7 0l30.169 30.17l-60.34 60.34l-30.17-30.17zM277.332 21.333v85.333h-42.667V21.333z"/></svg>
+                </span>
+            </button>
+        </span>
     </nav>
     <aside>
         <ul>
@@ -95,7 +87,7 @@
             <p>
                 Hi! I’m Purich Viwatkurkul, a senior at <strong>UC San Diego</strong> majoring in Mathematics-Computer Science, with a strong <i>passion</i> in <em>developing user-centric </em>software and contributing to industries like medicine, automotive, video games, and desktop/mobile apps. 
                 <br>
-                I'm also apart of the biggest computing organization at my university named <abbr>ACM</abbr> (Association for Computing Machinery) @ UCSD. I am a <dfn> Project Development Lead </dfn> which specializes in directing and coordinating our student software engineering development program where 60+ students a quarter form groups to build MERN projects over 10 weeks. I'm also involved with developing and leading workshops that teach relevant UIUX/SWE topics for beginners trying to learn more about industry standards. 
+                I'm also apart of the biggest computing organization at my university named <abbr>ACM</abbr> (Association for Computing Machinery) @ UCSD. I am a <dfn> Project Development Lead </dfn> which specializes in directing and coordinating our student software engineering development program where 60+ students a quarter form groups to build <highlighter highlighter-color="blue">MERN</highlighter> projects over 10 weeks. I'm also involved with developing and leading workshops that teach relevant UIUX/SWE topics for beginners trying to learn more about industry standards. 
                 <br>
                 In my free time, I love hitting the <b>gym</b>, exploring <b>coffee shops</b>, <b>discovering</b> new restaurants, <b>traveling</b>, and <b>cooking</b> fresh recipes.
             <p>
@@ -112,6 +104,12 @@
           </search>
         <h1>Experience</h1>
         <div id="experience-one">
+
+            <template>
+                <h2>Title Placeholder</h2>
+                <p>Description</p>
+            </template>
+
             <h3>Web Developer Intern - Data Science Alliance</h3>
             <ol>
                 <li>
@@ -166,19 +164,19 @@
             </tr>
             <tr>
                 <td>
-                    <div id="projectOne" style="border-color:black; border-style:solid; border-width:2px;">
+                    <div id="projectOne">
                         <iframe srcdoc="Image to be Added" title="projectoneanddone">
                         </iframe>
 
                     </div>
                 </td>
                 <td>
-                    <div id="projectTwo" style="border-color:black; border-style:solid; border-width:2px;">
+                    <div id="projectTwo">
                         <img src="assets/dsa.png" width="300px" height="200px"/>
                     </div>
                 </td>
                 <td>
-                    <div id="projectThree" style="border-color:black; border-style:solid; border-width:2px;">
+                    <div id="projectThree" >
                         <picture>
                             <source srcset="assets/tripsmart.png" media="(orientation: landscape)" />
                             <img src="assets/tripsmart.png" alt="reactimage" />
@@ -190,7 +188,7 @@
     </div>
 
     <hr>
-
+    
     <footer>
         <details>
             <summary>
