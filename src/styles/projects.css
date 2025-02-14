@@ -22,6 +22,7 @@
         border:1px solid var(--white);
         border-radius:12px;
         max-width:400px;
+        background-color: #16213e;  
     }
     
     #project-one > picture{
@@ -46,6 +47,7 @@
         border:1px solid var(--white);
         border-radius:12px;
         max-width:400px;
+        background-color: #16213e;  
     }
     
     #project-two > picture{
@@ -70,6 +72,8 @@
         border:1px solid var(--white);
         border-radius:12px;
         max-width:400px;
+        background-color: #16213e;  
+
     }
     
     #project-three > picture{
