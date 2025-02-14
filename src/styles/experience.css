@@ -24,6 +24,7 @@
         color:var(--white);
         font-family:"Figtree", serif;
         margin-bottom:6px;
+        font-size:16px;
     }
 
     .jobHeader{
@@ -56,6 +57,7 @@
         color:var(--white);
         font-family:"Figtree", serif;
         margin-bottom:6px;
+        font-size:16px;
     }
 
     .toolTags{
