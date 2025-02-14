@@ -7,36 +7,37 @@
     .projectContainer{
         display:flex;
         flex-wrap:wrap;
-        row-gap:20px;
+        gap:20px;
+        justify-content:center;
     }
     #projects > h2{
         margin-bottom:20px;
         font-size:28px;
         font-weight:700;
-        color:var(--white);
+        color:var(--frostwhite);
         font-family:"Figtree", serif;
     }
 
     #project-one{
         padding:20px;
-        border:1px solid var(--white);
+        border:1px solid var(--frostwhite);
         border-radius:12px;
-        max-width:400px;
-        background-color: #16213e;  
+        max-width:320px;
+        background-color: var(--dark-blue);  
     }
     
     #project-one > picture{
         margin-bottom:6px;
     }
     #project-one > h4{
-        color:#9d4edd;
+        color:var(--purple);
         font-size:19px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-one > p{
-        color:var(--white);
+        color:var(--frostwhite);
         font-size:16px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
@@ -44,24 +45,24 @@
 
     #project-two{
         padding:20px;
-        border:1px solid var(--white);
+        border:1px solid var(--frostwhite);
         border-radius:12px;
-        max-width:400px;
-        background-color: #16213e;  
+        max-width:320px;
+        background-color: var(--dark-blue);  
     }
     
     #project-two > picture{
         margin-bottom:6px;
     }
     #project-two > h4{
-        color:#9d4edd;
+        color:var(--purple);
         font-size:19px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-two > p{
-        color:var(--white);
+        color:var(--frostwhite);
         font-size:16px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
@@ -69,10 +70,10 @@
 
     #project-three{
         padding:20px;
-        border:1px solid var(--white);
+        border:1px solid var(--frostwhite);
         border-radius:12px;
-        max-width:400px;
-        background-color: #16213e;  
+        max-width:320px;
+        background-color: var(--dark-blue);  
 
     }
     
@@ -80,14 +81,14 @@
         margin-bottom:6px;
     }
     #project-three> h4{
-        color:#9d4edd;
+        color:var(--purple);
         font-size:19px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-three > p{
-        color:var(--white);
+        color:var(--frostwhite);
         font-size:16px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
@@ -96,6 +97,7 @@
     .githubProject{
         display:flex;
         align-items:center;
+        color:var(--frostwhite);
     }
     .projectTags{
         display:flex;
@@ -105,9 +107,212 @@
 }
 
 @media only screen and (min-width:992px){
+    #projects{
+        margin:0 15%;
+    }
+
+    .projectContainer{
+        display:flex;
+        flex-wrap:wrap;
+        gap:20px;
+        justify-content:flex-start;
+    }
+    #projects > h2{
+        margin-bottom:20px;
+        font-size:38px;
+        font-weight:700;
+        color:var(--frostwhite);
+        font-family:"Figtree", serif;
+    }
+
+    #project-one{
+        padding:20px;
+        border:1px solid var(--frostwhite);
+        border-radius:12px;
+        max-width:320px;
+        background-color: var(--dark-blue);  
+        flex: 1 1 320px;
+    }
+    
+    #project-one > picture{
+        margin-bottom:6px;
+    }
+    #project-one > h4{
+        color:var(--purple);
+        font-size:24px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+        font-weight:700;
+    }
+    #project-one > p{
+        color:var(--frostwhite);
+        font-size:18px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+    }
+
+    #project-two{
+        padding:20px;
+        border:1px solid var(--frostwhite);
+        border-radius:12px;
+        max-width:320px;
+        background-color: var(--dark-blue);  
+        flex: 1 1 320px; 
+    }
+    
+    #project-two > picture{
+        margin-bottom:6px;
+    }
+    #project-two > h4{
+        color:var(--purple);
+        font-size:24px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+        font-weight:700;
+    }
+    #project-two > p{
+        color:var(--frostwhite);
+        font-size:18px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+    }
+
+    #project-three{
+        padding:20px;
+        border:1px solid var(--frostwhite);
+        border-radius:12px;
+        max-width:320px; 
+        background-color: var(--dark-blue);  
+        flex: 1 1 320px;
+    }
+    
+    #project-three > picture{
+        margin-bottom:6px;
+    }
+    #project-three> h4{
+        color:var(--purple);
+        font-size:24px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+        font-weight:700;
+    }
+    #project-three > p{
+        color:var(--frostwhite);
+        font-size:18px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+    }
+
+    .githubHyperLink{
+        display:block;
+        width:32px;
+        height:32px;
+    }
 
 }
 
 @media only screen and (min-width:1200px){
+    #projects{
+        margin:0;
+    }
 
+    .projectContainer{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        margin:0 15%;
+        
+    }
+    #projects > h2{
+        margin-bottom:20px;
+        font-size:48px;
+        font-weight:700;
+        color:var(--frostwhite);
+        font-family:"Figtree", serif;
+        margin-left:20%;
+    }
+
+    #project-one{
+        padding:20px;
+        border:1px solid var(--frostwhite);
+        border-radius:12px;
+        max-width:400px;
+        background-color: var(--dark-blue);  
+        flex: 1 1 400px;
+    }
+    
+    #project-one > picture{
+        margin-bottom:6px;
+    }
+    #project-one > h4{
+        color:var(--purple);
+        font-size:32px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+        font-weight:700;
+    }
+    #project-one > p{
+        color:var(--frostwhite);
+        font-size:20px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+    }
+
+    #project-two{
+        padding:20px;
+        border:1px solid var(--frostwhite);
+        border-radius:12px;
+        max-width:400px;
+        background-color: var(--dark-blue);  
+        flex: 1 1 400px; 
+    }
+    
+    #project-two > picture{
+        margin-bottom:6px;
+    }
+    #project-two > h4{
+        color:var(--purple);
+        font-size:32px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+        font-weight:700;
+    }
+    #project-two > p{
+        color:var(--frostwhite);
+        font-size:20px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+    }
+
+    #project-three{
+        padding:20px;
+        border:1px solid var(--frostwhite);
+        border-radius:12px;
+        max-width:400px; 
+        background-color: var(--dark-blue);  
+        flex: 1 1 400px;
+    }
+    
+    #project-three > picture{
+        margin-bottom:6px;
+    }
+    #project-three> h4{
+        color:var(--purple);
+        font-size:32px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+        font-weight:700;
+    }
+    #project-three > p{
+        color:var(--frostwhite);
+        font-size:20px;
+        font-family:"Figtree", serif;
+        margin-bottom:6px;
+    }
+
+    .githubHyperLink{
+        display:block;
+        width:32px;
+        height:32px;
+    }
 }
