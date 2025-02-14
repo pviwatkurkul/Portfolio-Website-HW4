@@ -89,6 +89,10 @@
         margin-bottom:6px;
     }
     
+    .githubProject{
+        display:flex;
+        align-items:center;
+    }
     .projectTags{
         display:flex;
         flex-wrap:wrap;
