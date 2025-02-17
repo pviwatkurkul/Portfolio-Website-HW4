@@ -9,7 +9,7 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--background-blue);
+    background-color: var(--background-blue,DarkBlue);
   }
   
   img, picture, video, canvas, svg {

@@ -1,7 +1,7 @@
 
 @media only screen and (min-width:320px){
     nav{
-        width:100vw;
+        width:100dvw;
         display:flex;
         justify-content: flex-end;
         gap:12px;
@@ -12,67 +12,113 @@
     }
 
     #linkedIn,#github{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         display:block;
+        transition: all .2s ease-in-out; 
+    }
+
+
+    #linkedIn:hover{
+        transform: scale(1.2);
+    }
+
+    #github:hover{
+        transform: scale(1.2);
     }
 
     #contact-button{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         background:none;
         font-family:"Figtree", serif;
-        font-size:12px;
+        font-size:0.75rem;/*12px*/
         font-weight:600;
         border-radius:8px;
-        border:1px solid var(--frostwhite);
+        /*color-mix*/
+        border:1px solid color-mix(in srgb, #9e9e9e, #ababab 50%);
         padding:4px;
         cursor:pointer;
+        transition: all .2s ease-in-out; 
     }
 
+    #contact-button:hover{
+        transform: scale(1.1);
+        border-color:var(--white);
+    }
     .navigation{
         display:none;
     }
 
-    header{
+    /* Extra Credit */
+    #about-me {
         font-family:"Figtree", serif;
         margin:0 10%;
         margin-bottom:100px;
+        & h1{
+            font-weight:700;
+            font-size:34px;
+            color:var(--redpink,red);
+            animation:500ms slide-in;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
     }
+
     #about-me p:nth-child(1){
-        font-size:16px;
-        color:var(--frostwhite);
+        font-size:1rem;
+        color:var(--frostwhite,white);
         line-height:normal;
+        animation:400ms slide-in;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
     }
-    #about-me > h1{
-        font-weight:700;
-        font-size:34px;
-        color:var(--redpink);
-    }
-    #about-me > h3{
+
+
+    #about-me:has(> h3){
         font-weight:700;
         font-size:23px;
-        color:var(--frostwhite);
+        /*gamut color*/
+        color: color(display-p3 0.949 0.834 0.826 / 0.75);
+        animation:700ms slide-in;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
     }
     #about-me > h4{
         font-weight:600;
         font-size:19px;
         line-height:normal;
         margin-bottom:50px;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
+        animation:700ms slide-in;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
     }
 
+    @keyframes slide-in{
+        from{
+            transform:translateX(-100%);
+            opacity: 0;
+        }
+        
+        to{
+            transform:translateX(0%);
+            opacity: 1;
+
+        }
+    }
+  
     section{
         text-wrap:balance;
     }
     section > h2{
         margin-bottom:20px;
-        font-size:28px;
+        font-size:1.75rem;
         font-weight:700;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
     }
 
     section p{
-        font-size:16px;
-        color:var(--frostwhite);
+        font-size:1rem;
+        color:var(--frostwhite,white);
     }
 }
 
@@ -84,20 +130,20 @@
     }
 
     #linkedIn,#github{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         width:36px;
         height:36px;
         display:block;
     }
 
     #contact-button{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         background:none;
         font-family:"Figtree", serif;
-        font-size:16px;
+        font-size:1rem;
         font-weight:600;
         border-radius:12px;
-        border:2px solid var(--frostwhite);
+        border:2px solid color-mix(in srgb, #9e9e9e, #ababab 50%);
         padding:8px;
     }
 
@@ -118,36 +164,47 @@
     }
 
     .navigation ul li a{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         text-decoration:none;
     }
 
-    header{
+    .navigation ul li:hover{
+        transition: all .2s ease-in-out; 
+    }
+
+    .navigation ul li:hover{
+        transform: scale(1.2);
+    }
+
+    #about-me p:nth-child(1){
+        font-size:1.25rem;
+        color:var(--frostwhite,white);
+        line-height:normal;
+    }
+
+    /* Extra Credit */
+    #about-me {
         font-family:"Figtree", serif;
         margin:0 15%;
         margin-bottom:200px;
+        & h1{
+            font-weight:700;
+            font-size:3rem;
+            color:var(--redpink,red);
+        }
     }
-    #about-me p:nth-child(1){
-        font-size:18px;
-        color:var(--frostwhite);
-        line-height:normal;
-    }
-    #about-me > h1{
+ 
+    #about-me:has(> h3){
         font-weight:700;
-        font-size:48px;
-        color:var(--redpink);
-    }
-    #about-me > h3{
-        font-weight:700;
-        font-size:28px;
-        color:var(--frostwhite);
+        font-size:1.75rem;
+        color: color(display-p3 0.949 0.834 0.826 / 0.75);
     }
     #about-me > h4{
         font-weight:600;
-        font-size:24px;
+        font-size:1.5rem;
         line-height:normal;
         margin-bottom:100px;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
     }
 
     section{
@@ -157,11 +214,11 @@
         margin-bottom:40px;
         font-size:38px;
         font-weight:700;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
     }
     section p{
         font-size:18px;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
     }
 }
 
@@ -173,20 +230,20 @@
     }
 
     #linkedIn,#github{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         width:48px;
         height:48px;
         display:block;
     }
 
     #contact-button{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         background:none;
         font-family:"Figtree", serif;
-        font-size:20px;
+        font-size:1.25rem;
         font-weight:600;
         border-radius:12px;
-        border:2px solid var(--frostwhite);
+        border:2px solid color-mix(in srgb, #9e9e9e, #ababab 50%);
         padding:10px;
     }
 
@@ -201,42 +258,46 @@
 
     .navigation ul{
         list-style:url('../assets/bullet-planet-small.svg');
-        font-size:20px;
+        font-size:1.25rem;
         font-family:"Figtree",serif;
         font-weight:700;
     }
 
     .navigation ul li a{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         text-decoration:none;
     }
 
-    header{
+    #about-me p:nth-child(1){
+        font-size:1.75rem;
+        color:var(--frostwhite,white);
+        line-height:normal;
+    }
+
+    /* Extra Credit */
+    #about-me {
         font-family:"Figtree", serif;
         margin:0 20%;
         margin-bottom:300px;
+        & h1{
+            font-weight:700;
+            font-size:3.75rem;
+            color:var(--redpink,red);
+        }
     }
-    #about-me p:nth-child(1){
-        font-size:20px;
-        color:var(--frostwhite);
-        line-height:normal;
-    }
-    #about-me > h1{
-        font-weight:700;
-        font-size:60px;
-        color:var(--redpink);
-    }
-    #about-me > h3{
+
+    #about-me:has(> h3){
         font-weight:700;
         font-size:38px;
-        color:var(--frostwhite);
+        color: color(display-p3 0.949 0.834 0.826 / 0.75);
     }
+    
     #about-me > h4{
         font-weight:600;
-        font-size:32px;
+        font-size:2rem;
         line-height:normal;
         margin-bottom:100px;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
     }
 
     section{
@@ -244,12 +305,12 @@
     }
     section > h2{
         margin-bottom:40px;
-        font-size:48px;
+        font-size:3rem;
         font-weight:700;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
     }
     section p{
-        font-size:20px;
-        color:var(--frostwhite);
+        font-size:1.25rem;
+        color:var(--frostwhite,white);
     }
 }

@@ -14,66 +14,66 @@
         margin-bottom:20px;
         font-size:28px;
         font-weight:700;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-family:"Figtree", serif;
     }
 
     #project-one{
-        padding:20px;
-        border:1px solid var(--frostwhite);
+        padding:25px;
+        border:1px solid var(--frostwhite,white);
         border-radius:12px;
         max-width:320px;
-        background-color: var(--dark-blue);  
+        background-color: var(--dark-blue,navy);  
     }
     
     #project-one > picture{
         margin-bottom:6px;
     }
     #project-one > h4{
-        color:var(--purple);
+        color:var(--purple,DarkOrchid);
         font-size:19px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-one > p{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-size:16px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
     }
 
     #project-two{
-        padding:20px;
-        border:1px solid var(--frostwhite);
+        padding:25px;
+        border:1px solid var(--frostwhite,white);
         border-radius:12px;
         max-width:320px;
-        background-color: var(--dark-blue);  
+        background-color: var(--dark-blue,navy);  
     }
     
     #project-two > picture{
         margin-bottom:6px;
     }
     #project-two > h4{
-        color:var(--purple);
+        color:var(--purple,DarkOrchid);
         font-size:19px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-two > p{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-size:16px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
     }
 
     #project-three{
-        padding:20px;
-        border:1px solid var(--frostwhite);
+        padding:25px;
+        border:1px solid var(--frostwhite,white);
         border-radius:12px;
         max-width:320px;
-        background-color: var(--dark-blue);  
+        background-color: var(--dark-blue,navy);  
 
     }
     
@@ -81,14 +81,14 @@
         margin-bottom:6px;
     }
     #project-three> h4{
-        color:var(--purple);
+        color:var(--purple,DarkOrchid);
         font-size:19px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-three > p{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-size:16px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
@@ -97,13 +97,19 @@
     .githubProject{
         display:flex;
         align-items:center;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
+        transition: all .2s ease-in-out; 
+    }
+
+    .githubProject:hover{
+        transform: scale(1.2);
     }
     .projectTags{
         display:flex;
         flex-wrap:wrap;
         gap:10px;
     }
+
 }
 
 @media only screen and (min-width:992px){
@@ -121,16 +127,16 @@
         margin-bottom:20px;
         font-size:38px;
         font-weight:700;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-family:"Figtree", serif;
     }
 
     #project-one{
-        padding:20px;
-        border:1px solid var(--frostwhite);
+        padding:25px;
+        border:1px solid var(--frostwhite,white);
         border-radius:12px;
         max-width:320px;
-        background-color: var(--dark-blue);  
+        background-color: var(--dark-blue,navy);  
         flex: 1 1 320px;
     }
     
@@ -138,25 +144,25 @@
         margin-bottom:6px;
     }
     #project-one > h4{
-        color:var(--purple);
+        color:var(--purple,DarkOrchid);
         font-size:24px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-one > p{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-size:18px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
     }
 
     #project-two{
-        padding:20px;
-        border:1px solid var(--frostwhite);
+        padding:25px;
+        border:1px solid var(--frostwhite,white);
         border-radius:12px;
         max-width:320px;
-        background-color: var(--dark-blue);  
+        background-color: var(--dark-blue,navy);  
         flex: 1 1 320px; 
     }
     
@@ -164,25 +170,25 @@
         margin-bottom:6px;
     }
     #project-two > h4{
-        color:var(--purple);
+        color:var(--purple,DarkOrchid);
         font-size:24px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-two > p{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-size:18px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
     }
 
     #project-three{
-        padding:20px;
-        border:1px solid var(--frostwhite);
+        padding:25px;
+        border:1px solid var(--frostwhite,white);
         border-radius:12px;
         max-width:320px; 
-        background-color: var(--dark-blue);  
+        background-color: var(--dark-blue,navy);  
         flex: 1 1 320px;
     }
     
@@ -190,14 +196,14 @@
         margin-bottom:6px;
     }
     #project-three> h4{
-        color:var(--purple);
+        color:var(--purple,DarkOrchid);
         font-size:24px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-three > p{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-size:18px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
@@ -227,17 +233,17 @@
         margin-bottom:20px;
         font-size:48px;
         font-weight:700;
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-family:"Figtree", serif;
         margin-left:20%;
     }
 
     #project-one{
-        padding:20px;
-        border:1px solid var(--frostwhite);
+        padding:25px;
+        border:1px solid var(--frostwhite,white);
         border-radius:12px;
         max-width:400px;
-        background-color: var(--dark-blue);  
+        background-color: var(--dark-blue,navy);  
         flex: 1 1 400px;
     }
     
@@ -245,25 +251,25 @@
         margin-bottom:6px;
     }
     #project-one > h4{
-        color:var(--purple);
+        color:var(--purple,DarkOrchid);
         font-size:32px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-one > p{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-size:20px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
     }
 
     #project-two{
-        padding:20px;
-        border:1px solid var(--frostwhite);
+        padding:25px;
+        border:1px solid var(--frostwhite,white);
         border-radius:12px;
         max-width:400px;
-        background-color: var(--dark-blue);  
+        background-color: var(--dark-blue,navy);  
         flex: 1 1 400px; 
     }
     
@@ -271,25 +277,25 @@
         margin-bottom:6px;
     }
     #project-two > h4{
-        color:var(--purple);
+        color:var(--purple,DarkOrchid);
         font-size:32px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-two > p{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-size:20px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
     }
 
     #project-three{
-        padding:20px;
-        border:1px solid var(--frostwhite);
+        padding:25px;
+        border:1px solid var(--frostwhite,white);
         border-radius:12px;
         max-width:400px; 
-        background-color: var(--dark-blue);  
+        background-color: var(--dark-blue,navy);  
         flex: 1 1 400px;
     }
     
@@ -297,14 +303,14 @@
         margin-bottom:6px;
     }
     #project-three> h4{
-        color:var(--purple);
+        color:var(--purple,DarkOrchid);
         font-size:32px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-three > p{
-        color:var(--frostwhite);
+        color:var(--frostwhite,white);
         font-size:20px;
         font-family:"Figtree", serif;
         margin-bottom:6px;
