@@ -1,0 +1,156 @@
+@media only screen and (min-width:320px){
+    nav{
+        width:100dvw;
+        display:flex;
+        justify-content: flex-end;
+        gap:12px;
+        align-items:center;
+        margin-top:1%;
+        margin-bottom:20px;
+        padding-right:2%;
+    }
+
+    #linkedIn,#github{
+        color:var(--frostwhite,white);
+        display:block;
+        transition: all .2s ease-in-out; 
+    }
+
+
+    #linkedIn:hover{
+        transform: scale(1.2);
+    }
+
+    #github:hover{
+        transform: scale(1.2);
+    }
+
+    #home-button{
+        color:var(--frostwhite,white);
+        background:none;
+        font-family:"Figtree", serif;
+        font-size:0.75rem;/*12px*/
+        font-weight:600;
+        border-radius:8px;
+        /*color-mix*/
+        border:1px solid color-mix(in srgb, #9e9e9e, #ababab 50%);
+        padding:4px;
+        cursor:pointer;
+        transition: all .2s ease-in-out; 
+    }
+
+    #home-button:hover{
+        transform: scale(1.1);
+        border-color:var(--white);
+    }
+    .navigation{
+        display:none;
+    }
+
+    .mainContainer{
+        display:flex;
+        margin:0 10%;
+    }
+}
+
+@media only screen and (min-width:992px){
+    nav{
+        margin-top:1%;
+        margin-bottom:20px;
+        padding-right:2%;
+    }
+
+    #linkedIn,#github{
+        color:var(--frostwhite,white);
+        width:36px;
+        height:36px;
+        display:block;
+    }
+
+    #home-button{
+        color:var(--frostwhite,white);
+        background:none;
+        font-family:"Figtree", serif;
+        font-size:1rem;
+        font-weight:600;
+        border-radius:12px;
+        border:2px solid color-mix(in srgb, #9e9e9e, #ababab 50%);
+        padding:8px;
+    }
+
+  
+    .navigation{
+        position:sticky;
+        left:0.5%;
+        top:15%;
+        display:block;
+        width:fit-content;
+    }
+
+    .navigation ul{
+        list-style:url('../assets/bullet-planet-small.svg');
+        font-size:18px;
+        font-family:"Figtree",serif;
+        font-weight:700;
+    }
+
+    .navigation ul li a{
+        color:var(--frostwhite,white);
+        text-decoration:none;
+    }
+
+    .navigation ul li:hover{
+        transition: all .2s ease-in-out; 
+    }
+
+    .navigation ul li:hover{
+        transform: scale(1.2);
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    nav{
+        margin-top:1%;
+        margin-bottom:20px;
+        padding-right:2%;
+    }
+
+    #linkedIn,#github{
+        color:var(--frostwhite,white);
+        width:48px;
+        height:48px;
+        display:block;
+    }
+
+    #home-button{
+        color:var(--frostwhite,white);
+        background:none;
+        font-family:"Figtree", serif;
+        font-size:1.25rem;
+        font-weight:600;
+        border-radius:12px;
+        border:2px solid color-mix(in srgb, #9e9e9e, #ababab 50%);
+        padding:10px;
+    }
+
+  
+    .navigation{
+        position:sticky;
+        left:1%;
+        top:13%;
+        display:block;
+        width:fit-content;
+    }
+
+    .navigation ul{
+        list-style:url('../assets/bullet-planet-small.svg');
+        font-size:1.25rem;
+        font-family:"Figtree",serif;
+        font-weight:700;
+    }
+
+    .navigation ul li a{
+        color:var(--frostwhite,white);
+        text-decoration:none;
+    }
+}

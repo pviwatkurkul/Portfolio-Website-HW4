@@ -73,7 +73,7 @@
     }
 
 
-    #about-me:has(> h3){
+    #about-me > h3{
         font-weight:700;
         font-size:23px;
         /*gamut color*/
@@ -194,7 +194,7 @@
         }
     }
  
-    #about-me:has(> h3){
+    #about-me > h3{
         font-weight:700;
         font-size:1.75rem;
         color: color(display-p3 0.949 0.834 0.826 / 0.75);
@@ -286,7 +286,7 @@
         }
     }
 
-    #about-me:has(> h3){
+    #about-me > h3{
         font-weight:700;
         font-size:38px;
         color: color(display-p3 0.949 0.834 0.826 / 0.75);
