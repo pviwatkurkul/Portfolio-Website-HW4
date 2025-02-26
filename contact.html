@@ -33,29 +33,36 @@
         <main>
 
             <h1>
-                Contact Me
+                Let's Chat
             </h1>
-
-
+            <p>
+                Have an exciting opportunity or just want to leave a nice message? I would love to know about you and how I can be of your service!
+            </p>
+            <h2>Email</h2>
+            <p>
+                <a id="email-link" href="mailto:purichv123@gmail.com">
+                    purichv123@gmail.com
+                </a>
+            </p>
         </main>
 
-        </aside>
+        <aside>
             <form class="contactForm" action="https://httpbin.org/post" autocomplete="on" method="POST" target="_blank">
                 <input type="hidden" name="possible_bot" value="true" hidden>
-                <label for="name">Name <span class="required">*</span></label>
+
+                <label class="inputTitle required" for="name">Name</label>
                 <input id="name" type="text" name="name" 
-                maxlength="20" placeholder="Name" autofocus required
+                maxlength="20" placeholder="Your Name" autocomplete="on" autofocus required
                 oninvalid="setCustomValidity('Enter Valid Name')"
-                oninput="setCustomValidity('')"
-                />
+                oninput="setCustomValidity('')"/>
+
+                <label class="inputTitle required" for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="example@email.com" autocomplete="on" required/>
                 
-                <label for="email">Email <span class="required">*</span></label>
-                <input id="email" type="email" name="email" placeholder="Email" required/>
+                <label class="inputTitle required" for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Leave a message!" required></textarea>
 
-                <label for="message">Leave a Message! <span class="required">*</span></label>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
-
-                <button type="submit" >Submit</button>
+                <button type="submit" id="form-submit">Submit</button>
             </form>
         </aside>
     </div>
