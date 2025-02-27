@@ -47,7 +47,7 @@
         </main>
 
         <aside>
-            <form class="contactForm" action="https://httpbin.org/post" autocomplete="on" method="POST" target="_blank">
+            <form id="contact-form" action="https://httpbin.org/post" autocomplete="on" method="POST" target="_blank">
                 <input type="hidden" name="possible_bot" value="true" hidden>
 
                 <label class="inputTitle required" for="name">Name</label>
@@ -63,46 +63,62 @@
                 <textarea id="message" name="message" placeholder="Leave a message!" required></textarea>
 
                 <button type="submit" id="form-submit">Submit</button>
+
+                <output id="error" for="message" form="contact-form"></output>
+                <output id="info" for="email" form=""contact-form"></output>
             </form>
         </aside>
     </div>
-    <!-- <footer>
-        <address>
-            Developed by Purich Viwatkurkul<br> 
-            <a href="mailto:pviwatkurkul@ucsd.edu">pviwatkurkul@ucsd.edu</a> <br>
-            San Diego, USA
-        </address>
-        <br>
-        <p>
-            <math display="block">
-                <mrow>
-                    <mi>E</mi>
-                    <mo>=</mo>
-                    <msup>
-                        <mi>mc</mi>
-                        <mn>2</mn>
-                    </msup>
-                </mrow>
-            </math>
-        </p>
-            
 
 
-        <b>Change Log:</b>
-        <del>
-            <p>Removed fonts</p>
-        </del>
-        <ins>
-        <p>Added finishing touches and bug fixes for validator</p>
-        </ins>
+    <script>
+        document.addEventListener("DOMContentLoaded", () =>{
+            let nameInput = document.getElementById("name");
+            let emailInput = document.getElementById("email");
+            let messageInput = document.getElementById("message");
+            let outputError = document.getElementById("error");
+            let outputInfo = document.getElementById("info");
+            let form = document.getElementById("contact-form");
 
-        <dialog open>
-            <form method="dialog">
-                <button>
-                    Click to Close
-                </button>
-            </form>
-        </dialog>
-    </footer> -->
+            messageInput.addEventListener("input", () =>{
+                validate();
+            });
+
+            form.addEventListener("input", () =>{
+                info();
+            })
+            form.addEventListener("submit", (e) =>{
+                if(!validate()){
+                    e.preventDefault();
+                }
+            });
+
+            function validate(){
+                let maxLength = 1500;
+                let message = messageInput.value.trim();
+
+                if (message.length >= maxLength){
+                    outputError.textContent = `Message too long! Please shorten.`;
+                    outputError.style.color = "white";
+                    return false;
+                }
+                else{
+                    outputError.textContent = "";
+                    return true;
+                }
+            };
+
+            function info(){
+                let nameLength = nameInput.value.trim().length;
+                let emailLength = emailInput.value.trim().length;
+                let messageLength = messageInput.value.trim().length;
+                if (nameLength > 0 && emailLength > 0 && messageLength > 0 && (validate())){
+                    outputInfo.textContent = `Form Complete.`;
+                    outputInfo.style.color = "Aquamarine";
+                    return true;
+                }
+            };
+        });
+    </script>
 </body>
 </html>
