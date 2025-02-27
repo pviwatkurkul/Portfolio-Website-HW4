@@ -224,14 +224,14 @@
 
     .projectContainer{
         display:flex;
-        flex-wrap:wrap;
+        flex-wrap:nowrap;
         justify-content:space-between;
         margin:0 15%;
         
     }
     #projects > h2{
         margin-bottom:20px;
-        font-size:48px;
+        font-size:2.75rem;
         font-weight:700;
         color:var(--frostwhite,white);
         font-family:"Figtree", serif;
@@ -239,12 +239,12 @@
     }
 
     #project-one{
-        padding:25px;
+        padding:20px 25px;
         border:1px solid var(--frostwhite,white);
         border-radius:12px;
-        max-width:400px;
+        max-width:340px;
         background-color: var(--dark-blue,navy);  
-        flex: 1 1 380px;
+        flex: 1 1 340px;
     }
     
     #project-one > picture{
@@ -252,14 +252,14 @@
     }
     #project-one > h4{
         color:var(--purple,DarkOrchid);
-        font-size:32px;
+        font-size:1.75rem;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-one > p{
         color:var(--frostwhite,white);
-        font-size:20px;
+        font-size:1.25rem;
         font-family:"Figtree", serif;
         margin-bottom:6px;
     }
@@ -268,9 +268,9 @@
         padding:25px;
         border:1px solid var(--frostwhite,white);
         border-radius:12px;
-        max-width:400px;
+        max-width:340px;
         background-color: var(--dark-blue,navy);  
-        flex: 1 1 380px; 
+        flex: 1 1 340px; 
     }
     
     #project-two > picture{
@@ -278,14 +278,14 @@
     }
     #project-two > h4{
         color:var(--purple,DarkOrchid);
-        font-size:32px;
+        font-size:1.75rem;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-two > p{
         color:var(--frostwhite,white);
-        font-size:20px;
+        font-size:1.25rem;
         font-family:"Figtree", serif;
         margin-bottom:6px;
     }
@@ -294,9 +294,9 @@
         padding:25px;
         border:1px solid var(--frostwhite,white);
         border-radius:12px;
-        max-width:400px; 
+        max-width:340px; 
         background-color: var(--dark-blue,navy);  
-        flex: 1 1 380px;
+        flex: 1 1 340px;
     }
     
     #project-three > picture{
@@ -304,14 +304,14 @@
     }
     #project-three> h4{
         color:var(--purple,DarkOrchid);
-        font-size:32px;
+        font-size:1.75rem;
         font-family:"Figtree", serif;
         margin-bottom:6px;
         font-weight:700;
     }
     #project-three > p{
         color:var(--frostwhite,white);
-        font-size:20px;
+        font-size:1.25rem;
         font-family:"Figtree", serif;
         margin-bottom:6px;
     }

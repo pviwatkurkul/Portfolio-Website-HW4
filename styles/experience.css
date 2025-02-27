@@ -66,6 +66,8 @@
         font-family:"Figtree", serif;
         font-size:1.75rem;
         text-decoration:underline;
+        display:flex;
+        align-items:flex-end;
     }
     .toolTags{
         display:flex;
@@ -170,11 +172,11 @@
 @media only screen and (min-width:1200px){
     main{
         margin:0 20%;
-        margin-bottom:300px;
+        margin-bottom:250px;
     }
     main > h2{
-        margin-bottom:40px;
-        font-size:3rem;
+        margin-bottom:30px;
+        font-size:2.75rem;
         font-weight:700;
         color:var(--frostwhite,white);
         font-family:"Figtree", serif;
@@ -206,7 +208,7 @@
 
     .jobHeader > h4{
         color:var(--purple,DarkOrchid);
-        font-size:2rem;
+        font-size:1.75rem;
     }
     
     .jobHeader > p{
@@ -232,7 +234,7 @@
     #resume{
         color:var(--frostwhite,white);
         font-family:"Figtree", serif;
-        font-size:38px;
+        font-size:1.25rem;
         text-decoration:underline;
     }
     .toolTags{
