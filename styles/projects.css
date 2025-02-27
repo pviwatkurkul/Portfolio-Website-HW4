@@ -121,7 +121,7 @@
         display:flex;
         flex-wrap:wrap;
         gap:20px;
-        justify-content:flex-start;
+        justify-content:space-between;
     }
     #projects > h2{
         margin-bottom:20px;
@@ -244,7 +244,7 @@
         border-radius:12px;
         max-width:400px;
         background-color: var(--dark-blue,navy);  
-        flex: 1 1 400px;
+        flex: 1 1 380px;
     }
     
     #project-one > picture{
@@ -270,7 +270,7 @@
         border-radius:12px;
         max-width:400px;
         background-color: var(--dark-blue,navy);  
-        flex: 1 1 400px; 
+        flex: 1 1 380px; 
     }
     
     #project-two > picture{
@@ -296,7 +296,7 @@
         border-radius:12px;
         max-width:400px; 
         background-color: var(--dark-blue,navy);  
-        flex: 1 1 400px;
+        flex: 1 1 380px;
     }
     
     #project-three > picture{
