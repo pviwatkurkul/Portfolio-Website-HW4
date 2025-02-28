@@ -132,6 +132,11 @@
         color:rgba(249, 249, 249, 0.6)
     }
 
+    input:user-invalid:required{
+        border:1px solid var(--redpink,red);
+        border-radius:8px;
+    }
+
     textarea{
         font-family:"Figtree",serif;
         font-weight:400;
@@ -143,6 +148,10 @@
         margin-top:3px;
         margin-bottom:10px;
         padding:8px;
+    }
+
+    textarea:user-invalid:required{
+        border:1px solid var(--redpink,red);
     }
 
     #message::placeholder{
@@ -168,6 +177,25 @@
     #form-submit:hover{
         cursor:pointer;
     }
+
+    #info{
+        font-family:"Figtree",serif;
+        font-size:1rem;
+        color:Aquamarine;
+    }
+
+    #error{
+        font-family:"Figtree",serif;
+        font-size:1rem;
+        color:var(--frostwhite,white)
+    }
+    
+    #error2{
+        font-family:"Figtree",serif;
+        font-size:1rem;
+        color:var(--frostwhite,white)
+    }
+
 }
 
 @media only screen and (min-width:992px){
@@ -278,6 +306,10 @@
         margin-bottom:20px;
     }
 
+    input:user-invalid:required{
+        border:2px solid var(--redpink,red);
+        border-radius:8px;
+    }
 
     input::placeholder{
         font-family:"Figtree",serif;
@@ -298,6 +330,10 @@
         border-radius:4px;
         margin-top:3px;
         margin-bottom:20px;
+    }
+
+    textarea:user-invalid:required{
+        border:2px solid var(--redpink,red);
     }
 
     #message::placeholder{

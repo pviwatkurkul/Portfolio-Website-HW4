@@ -55,96 +55,19 @@
                 maxlength="50" placeholder="Your Name" autocomplete="on" autofocus required/>
 
                 <label class="inputTitle required" for="email">Email</label>
-                <input id="email" type="email" name="email" placeholder="example@email.com" autocomplete="on" minlength="1" maxlength="50" 
-                pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required/>
+                <input id="email" type="email" name="email" placeholder="example@email.com" autocomplete="on" minlength="1" maxlength="50" required
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"/>
                 
                 <label class="inputTitle required" for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Leave a message!" minlength="1" maxlength="2000" required></textarea>
-                <output id="info" for="email" form="contact-form"></output>
 
                 <button type="submit" id="form-submit">Submit</button>
 
                 <output id="error" for="message" form="contact-form"></output>
-                <output id="error2" for="email" form="contact-form"></output>
+                <output id="info" for="email" form=""contact-form"></output>
             </form>
         </aside>
     </div>
 
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () =>{
-            let nameInput = document.getElementById("name");
-            let emailInput = document.getElementById("email");
-            let messageInput = document.getElementById("message");
-            let messageError = document.getElementById("error");
-            let emailError = document.getElementById("error2");
-
-            let outputInfo = document.getElementById("info");
-            let form = document.getElementById("contact-form");
-
-            messageInput.addEventListener("input", () =>{
-                info()
-                validateMessage();
-            });
-
-            emailInput.addEventListener("input", (e) =>{
-                validateEmail(e);
-            })
-
-            form.addEventListener("submit", (e) =>{
-                if((!nameInput.checkValidity()) || (!validateMessage()) || (!validateEmail())) {
-                    e.preventDefault();
-                }
-            });
-
-            function validateEmail(e){
-                if(!emailInput.checkValidity()){
-                    emailError.textContent=`Email Invalid!`;
-                    return false
-                }
-                else if(emailInput.checkValidity()){
-                    emailError.textContent="";
-                    return true;
-                }                
-            }
-
-            function validateMessage(){
-                let maxLength = 2000;
-                let message = messageInput.value.trim();
-                if (message.length == 0){
-                    messageError.textContent = `Cannot submit empty message!`;
-                    return false;
-                }
-                else if (message.length >= maxLength){
-                    messageError.textContent = `Message too long! Please shorten.`;
-                    return false;
-                }
-                else{
-                    messageError.textContent = "";
-                    return true;
-                }
-            };
-
-            function info(){
-                let maxLength = 2000;
-                let message = messageInput.value.trim();
-
-                if (message.length < maxLength){
-                    outputInfo.textContent = `${(maxLength - message.length)}/${maxLength}`;
-                    if((maxLength - message.length) <= (maxLength / 4)){
-                        outputInfo.style.color = "red";
-                    }
-                    else if((maxLength - message.length) <= (maxLength/2)){
-                        outputInfo.style.color= "yellow";
-                    }
-                    return true;
-                }
-                else{
-                    outputInfo.textContent = "";
-                    return false;
-                }
-            };
-        });
-    </script>
 </body>
 </html>
