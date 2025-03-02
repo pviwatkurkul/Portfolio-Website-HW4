@@ -1,0 +1,603 @@
+@media only screen and (min-width:320px){
+    nav{
+        width:100dvw;
+        display:flex;
+        justify-content: flex-end;
+        gap:12px;
+        align-items:center;
+        margin-top:1%;
+        margin-bottom:20px;
+        padding-right:2%;
+    }
+
+    #linkedIn,#github{
+        color:var(--frostwhite,white);
+        display:block;
+        transition: all .2s ease-in-out; 
+    }
+
+
+    #linkedIn:hover{
+        transform: scale(1.2);
+    }
+
+    #github:hover{
+        transform: scale(1.2);
+    }
+
+    #home-button{
+        color:var(--frostwhite,white);
+        background:none;
+        font-family:"Figtree", serif;
+        font-size:0.75rem;/*12px*/
+        font-weight:600;
+        border-radius:8px;
+        /*color-mix*/
+        border:1px solid color-mix(in srgb, #9e9e9e, #ababab 50%);
+        padding:4px;
+        cursor:pointer;
+        transition: all .2s ease-in-out; 
+    }
+
+    #home-button:hover{
+        transform: scale(1.1);
+        border-color:var(--white);
+    }
+    .navigation{
+        display:none;
+    }
+
+    .mainContainer{
+        display:flex;
+        flex-wrap:wrap;
+        margin:10% 10%;
+        justify-content: space-between;
+        align-items:center;
+    }
+
+    main{
+        max-width:300px;
+    }
+    main > h1{
+        font-family:"Figtree",serif;
+        font-weight:700;
+        font-size:34px;
+        color:var(--redpink, red);
+    }
+
+    main > h2{
+        font-family:"Figtree",serif;
+        font-weight:700;
+        font-size:1.75rem;
+        color:var(--redpink,red);
+    }
+    
+    main > p {
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:1rem;
+        color:var(--frostwhite,white);
+        margin-bottom:25px;
+    }
+
+    #email-link{
+        text-decoration:underline;
+        color:var(--frostwhite,white);
+    }
+    
+    aside{
+        width:100%;
+        min-width:250px;
+        max-width:400px;
+        flex-grow:1;
+    }
+    #contact-form{
+        border:1px solid var(--redpink,red);
+        padding:10px;
+        border-radius:12px;
+        display:flex;
+        flex-direction:column;
+        background-color:rgba(249, 249, 249, 0.05)
+    }
+
+    .inputTitle{
+        font-family:"Figtree",serif;
+        font-weight:700;
+        font-size:1rem;
+        margin-bottom:2px;
+        color:var(--frostwhite,white);
+    }
+
+    .required:after {
+        content:"*";
+        color: red;
+      }
+
+    input{
+        font-family:"Figtree",serif;
+        font-size:1rem;
+        border:none;
+        border-bottom:1px solid var(--frostwhite,white);
+        padding:0 2px;
+        background:none;
+        color:var(--frostwhite,white);
+        margin-bottom:10px;
+    }
+
+
+    input::placeholder{
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:1rem;
+        color:rgba(249, 249, 249, 0.6)
+    }
+
+    input:user-invalid:required{
+        border:1px solid var(--redpink,red);
+        border-radius:8px;
+    }
+
+    textarea{
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:0.75rem;
+        color:var(--frostwhite,white);
+        background:none;
+        border:1px solid var(--frostwhite,white);
+        border-radius:4px;
+        margin-top:3px;
+        margin-bottom:10px;
+        padding:8px;
+    }
+
+    textarea:user-invalid:required{
+        border:1px solid var(--redpink,red);
+    }
+
+    #message::placeholder{
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:0.75rem;
+        color:rgba(249, 249, 249, 0.6)
+    }
+
+    #form-submit{
+        font-family:"Figtree",serif;
+        font-weight:700;
+        background:none;
+        border:1px solid var(--frostwhite);
+        color:var(--purple,purple);
+        font-size:1rem;
+        padding:6px 12px;
+        align-self:flex-end;
+        flex-basis:auto;
+        border-radius:8px;
+    }
+
+    #form-submit:hover{
+        cursor:pointer;
+    }
+
+    #info{
+        font-family:"Figtree",serif;
+        font-size:1rem;
+        color:Aquamarine;
+    }
+
+    #error{
+        font-family:"Figtree",serif;
+        font-size:1rem;
+        color:var(--redpink,white);
+
+    }
+    
+    #error2{
+        font-family:"Figtree",serif;
+        font-size:1rem;
+        color:var(--redpink,white);
+    }
+
+    #error3{
+        font-family:"Figtree",serif;
+        font-size:1rem;
+        color:var(--redpink,white);
+        opacity:1;
+        transition:opacity 1s ease-out;
+    }
+
+    #error3.fade-out{
+        opacity:0;
+    }
+}
+
+@media only screen and (min-width:992px){
+    nav{
+        margin-top:1%;
+        margin-bottom:20px;
+        padding-right:2%;
+    }
+
+    #linkedIn,#github{
+        color:var(--frostwhite,white);
+        width:36px;
+        height:36px;
+        display:block;
+    }
+
+    #home-button{
+        color:var(--frostwhite,white);
+        background:none;
+        font-family:"Figtree", serif;
+        font-size:1rem;
+        font-weight:600;
+        border-radius:12px;
+        border:2px solid color-mix(in srgb, #9e9e9e, #ababab 50%);
+        padding:8px;
+    }
+
+  
+    .navigation{
+        position:sticky;
+        left:0.5%;
+        top:15%;
+        display:block;
+        width:fit-content;
+    }
+
+    .navigation ul{
+        list-style:url('../assets/bullet-planet-small.svg');
+        font-size:18px;
+        font-family:"Figtree",serif;
+        font-weight:700;
+    }
+
+    .navigation ul li a{
+        color:var(--frostwhite,white);
+        text-decoration:none;
+    }
+
+    .navigation ul li:hover{
+        transition: all .2s ease-in-out; 
+    }
+
+    .navigation ul li:hover{
+        transform: scale(1.2);
+    }
+
+    main{
+        max-width:300px;
+    }
+    main > h1{
+        font-size:3rem;
+    }
+
+    main > h2{
+        font-size:38px;
+    }
+    
+    main > p {
+        font-size:18px;
+    }
+
+    #email-link{
+        text-decoration:underline;
+        color:var(--frostwhite,white);
+    }
+    
+    aside{
+        width:100%;
+        min-width:400px;
+        max-width:450px;
+        flex-grow:1;
+    }
+
+    #contact-form{
+        border:2px solid var(--redpink,red);
+        padding:12px;
+        border-radius:12px;
+    }
+
+    .inputTitle{
+        font-size:18px;
+        margin-bottom:2px;
+    }
+
+    .required:after {
+        content:"*";
+        color: red;
+      }
+
+    input{
+        font-family:"Figtree",serif;
+        font-size:18px;
+        border:none;
+        border-bottom:1px solid var(--frostwhite,white);
+        padding:0 2px;
+        background:none;
+        color:var(--frostwhite,white);
+        margin-bottom:20px;
+    }
+
+    input:user-invalid:required{
+        border:2px solid var(--redpink,red);
+        border-radius:8px;
+    }
+
+    input::placeholder{
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:18px;
+        color:rgba(249, 249, 249, 0.6)
+    }
+
+    textarea{
+        width:100%;
+        box-sizing:border-box;
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:1rem;
+        color:var(--frostwhite,white);
+        background:none;
+        border:1px solid var(--frostwhite,white);
+        border-radius:4px;
+        margin-top:3px;
+        margin-bottom:20px;
+    }
+
+    textarea:user-invalid:required{
+        border:2px solid var(--redpink,red);
+    }
+
+    #message::placeholder{
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:1rem;
+        color:rgba(249, 249, 249, 0.6)
+    }
+
+    #form-submit{
+        font-family:"Figtree",serif;
+        font-weight:700;
+        background:none;
+        border:1px solid var(--frostwhite);
+        color:var(--purple,purple);
+        font-size:18px;
+        padding:6px 12px;
+        align-self:flex-end;
+        flex-basis:auto;
+        border-radius:8px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+    nav{
+        margin-top:1%;
+        margin-bottom:20px;
+        padding-right:2%;
+    }
+
+    #linkedIn,#github{
+        color:var(--frostwhite,white);
+        width:48px;
+        height:48px;
+        display:block;
+    }
+
+    #home-button{
+        color:var(--frostwhite,white);
+        background:none;
+        font-family:"Figtree", serif;
+        font-size:1.25rem;
+        font-weight:600;
+        border-radius:12px;
+        border:2px solid color-mix(in srgb, #9e9e9e, #ababab 50%);
+        padding:10px;
+    }
+
+  
+    .navigation{
+        position:sticky;
+        left:1%;
+        top:13%;
+        display:block;
+        width:fit-content;
+    }
+
+    .navigation ul{
+        list-style:url('../assets/bullet-planet-small.svg');
+        font-size:1.25rem;
+        font-family:"Figtree",serif;
+        font-weight:700;
+    }
+
+    .navigation ul li a{
+        color:var(--frostwhite,white);
+        text-decoration:none;
+    }
+
+    .mainContainer{
+        margin:10% 10%;
+    }
+    main{
+        max-width:400px;
+    }
+    main > h1{
+        font-size:3.75rem;
+    }
+
+    main > h2{
+        font-size:3rem;
+    }
+    
+    main > p {
+        font-size:20px;
+    }
+
+    #email-link{
+        text-decoration:underline;
+        color:var(--frostwhite,white);
+    }
+    
+    aside{
+        width:100%;
+        min-width:450px;
+        max-width:550px;
+        flex-grow:1;
+    }
+
+    #contact-form{
+        border:2px solid var(--redpink,red);
+        padding:24px;
+        border-radius:16px;
+    }
+
+    .inputTitle{
+        font-size:20px;
+        margin-bottom:2px;
+    }
+
+    .required:after {
+        content:"*";
+        color: red;
+      }
+
+    input{
+        font-family:"Figtree",serif;
+        font-size:20px;
+        border:none;
+        border-bottom:1px solid var(--frostwhite,white);
+        padding:0 2px;
+        background:none;
+        color:var(--frostwhite,white);
+        margin-bottom:24px;
+    }
+
+
+    input::placeholder{
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:20px;
+        color:rgba(249, 249, 249, 0.6)
+    }
+
+    textarea{
+        width:100%;
+        box-sizing:border-box;
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:18px;
+        color:var(--frostwhite,white);
+        background:none;
+        border:1px solid var(--frostwhite,white);
+        border-radius:4px;
+        margin-top:3px;
+        margin-bottom:24px;
+    }
+
+    #message::placeholder{
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:18px;
+        color:rgba(249, 249, 249, 0.6)
+    }
+
+    #form-submit{
+        font-family:"Figtree",serif;
+        font-weight:700;
+        background:none;
+        border:2px solid var(--frostwhite);
+        color:var(--purple,purple);
+        font-size:20px;
+        padding:6px 12px;
+        align-self:flex-end;
+        flex-basis:auto;
+        border-radius:8px;
+    }
+}
+
+@media only screen and (min-width:1600px){
+    .mainContainer{
+        margin:10% 13%;
+    }
+    main{
+        max-width:500px;
+    }
+    main > h1{
+        font-size:4rem;
+    }
+
+    main > h2{
+        font-size:3.25rem;
+    }
+    
+    main > p {
+        font-size:24px;
+    }
+
+    #email-link{
+        text-decoration:underline;
+        color:var(--frostwhite,white);
+    }
+    
+    aside{
+        width:100%;
+        min-width:550px;
+        max-width:650px;
+        flex-grow:1;
+    }
+
+    #contact-form{
+        border:2px solid var(--redpink,red);
+        padding:24px;
+        border-radius:16px;
+    }
+
+    .inputTitle{
+        font-size:24px;
+        margin-bottom:2px;
+    }
+
+    .required:after {
+        content:"*";
+        color: red;
+      }
+
+    input{
+        font-family:"Figtree",serif;
+        font-size:24px;
+        border:none;
+        border-bottom:1px solid var(--frostwhite,white);
+        padding:4px 8px;
+        background:none;
+        color:var(--frostwhite,white);
+        margin-bottom:32px;
+    }
+
+
+    input::placeholder{
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:24px;
+        color:rgba(249, 249, 249, 0.6)
+    }
+
+    textarea{
+        width:100%;
+        box-sizing:border-box;
+        font-family:"Figtree",serif;
+        font-weight:400;
+        font-size:20px;
+        color:var(--frostwhite,white);
+        border-color:2px solid var(--frostwhite,white);
+    }
+
+    #message::placeholder{
+        color:rgba(249, 249, 249, 0.6)
+    }
+
+    #form-submit{
+        border-color:var(--frostwhite);
+        color:var(--purple,purple);
+    }
+}

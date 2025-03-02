@@ -17,7 +17,6 @@
         transition: all .2s ease-in-out; 
     }
 
-
     #linkedIn:hover{
         transform: scale(1.2);
     }
@@ -40,6 +39,9 @@
         transition: all .2s ease-in-out; 
     }
 
+    #contact-button .light-mode{
+        color:var(--darkblack,black);
+    }
     #contact-button:hover{
         transform: scale(1.1);
         border-color:var(--white);

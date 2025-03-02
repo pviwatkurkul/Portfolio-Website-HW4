@@ -187,15 +187,27 @@
     #error{
         font-family:"Figtree",serif;
         font-size:1rem;
-        color:var(--frostwhite,white)
+        color:var(--redpink,white);
+
     }
     
     #error2{
         font-family:"Figtree",serif;
         font-size:1rem;
-        color:var(--frostwhite,white)
+        color:var(--redpink,white);
     }
 
+    #error3{
+        font-family:"Figtree",serif;
+        font-size:1rem;
+        color:var(--redpink,white);
+        opacity:1;
+        transition:opacity 1s ease-out;
+    }
+
+    #error3.fade-out{
+        opacity:0;
+    }
 }
 
 @media only screen and (min-width:992px){

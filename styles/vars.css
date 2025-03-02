@@ -1,7 +1,14 @@
 :root{
+    /*Dark Mode Palette*/
     --background-blue:#1a1a2e;
     --dark-blue:#16213e;
     --frostwhite:#f9f9f9;
     --redpink:#e94560;
     --purple:#9d4edd;
 }
+    /*Light Mode Palette*/
+    [data-theme="light"]{
+    --background-blue:#f2f2f2;
+    --frostwhite:#0b090a;
+    --dark-blue:#cccccc;
+    }

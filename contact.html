@@ -14,6 +14,9 @@
 </head>
 <body>
     <nav>
+        <button class="themeButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><circle cx="12" cy="12" r="8.5" stroke="#fff5fcfa" stroke-width="1"/><path fill="#fff5fcfa" d="M16.243 7.757a6 6 0 1 0-8.486 8.486L12 12z"/></g></svg>
+        </button>
         <a href="https://www.linkedin.com/in/purich-viwatkurkul/">
             <svg role="img" id="linkedIn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <title>LinkedIn Logo Hyperlink</title>
@@ -47,12 +50,14 @@
         </main>
 
         <aside>
-            <form id="contact-form" action="https://httpbin.org/post" autocomplete="on" method="POST" target="_blank">
+            <form id="contact-form" action="https://httpbin.org/post" autocomplete="on" method="POST" target="_blank" novalidate>
                 <input type="hidden" name="possible_bot" value="true" hidden>
+
+                <input type="hidden" name="form_errors" id="form_errors" value="">
 
                 <label class="inputTitle required" for="name">Name</label>
                 <input id="name" type="text" name="name" minlength="1"
-                maxlength="50" placeholder="Your Name" autocomplete="on" autofocus required/>
+                maxlength="50" placeholder="Your Name" autocomplete="on" autofocus required pattern="^[a-zA-Z0-9_]*$"/>
 
                 <label class="inputTitle required" for="email">Email</label>
                 <input id="email" type="email" name="email" placeholder="example@email.com" autocomplete="on" minlength="1" maxlength="50" 
@@ -66,6 +71,8 @@
 
                 <output id="error" for="message" form="contact-form"></output>
                 <output id="error2" for="email" form="contact-form"></output>
+                <output id="error3" for="name" form="contact-form"></output>
+
             </form>
         </aside>
     </div>
@@ -73,14 +80,23 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () =>{
+
+            let toggleTheme = document.getElementById("theme-mode-button");
             let nameInput = document.getElementById("name");
             let emailInput = document.getElementById("email");
             let messageInput = document.getElementById("message");
+
             let messageError = document.getElementById("error");
             let emailError = document.getElementById("error2");
+            let nameError = document.getElementById("error3");
+            const hiddenErrors = document.getElementById("form_errors");
 
             let outputInfo = document.getElementById("info");
             let form = document.getElementById("contact-form");
+
+            nameInput.addEventListener("input", (e) =>{
+                validateName(e);
+            });
 
             messageInput.addEventListener("input", () =>{
                 info()
@@ -92,10 +108,56 @@
             })
 
             form.addEventListener("submit", (e) =>{
-                if((!nameInput.checkValidity()) || (!validateMessage()) || (!validateEmail())) {
-                    e.preventDefault();
+
+                const form_errors = [];
+
+                if (!validateName()) {
+                    form_errors.push({
+                    field: "name",
+                    errorMessage: nameInput.validationMessage
+                    });
                 }
+                if (!validateEmail()) {
+                    form_errors.push({
+                    field: "email",
+                    errorMessage: emailInput.validationMessage
+                    });
+                }
+                if (!validateMessage()) {
+                    form_errors.push({
+                    field: "message",
+                    errorMessage: messageInput.validationMessage
+                    });
+                }
+
+
+                hiddenErrors.value = JSON.stringify(form_errors);
+
             });
+
+            let fadeTimeout;
+            function validateName(e){
+                if(!nameInput.checkValidity()){
+                    nameError.textContent=`Illegal Character!`;
+
+                    if (fadeTimeout) {
+                        clearTimeout(fadeTimeout);
+                    }
+
+                    fadeTimeout = setTimeout(() =>{
+                        nameError.classList.add('fade-out');
+                    },2000);
+                    return false
+                }
+                else if(nameInput.checkValidity()){
+                    nameError.textContent="";
+                    if (fadeTimeout) {
+                        clearTimeout(fadeTimeout);
+                    }
+                    nameError.classList.remove('fade-out')
+                    return true;
+                }             
+            }
 
             function validateEmail(e){
                 if(!emailInput.checkValidity()){
@@ -144,7 +206,19 @@
                     return false;
                 }
             };
-        });
+
+            if(!localStorage.getItem("theme")){
+                localStorage.setItem("theme","default");
+            }
+
+            // toggleTheme.addEventListener("click", () =>{
+            //     if(localStorage.getItem("theme") === "default"){
+                    
+            //     }
+            // });
+         });
+
+
     </script>
 </body>
 </html>
