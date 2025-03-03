@@ -16,7 +16,6 @@
         transition: all .2s ease-in-out; 
     }
 
-
     #linkedIn:hover{
         transform: scale(1.2);
     }
@@ -129,7 +128,7 @@
         font-family:"Figtree",serif;
         font-weight:400;
         font-size:1rem;
-        color:rgba(249, 249, 249, 0.6)
+        color:var(--lightgrey,Gainsboro);
     }
 
     input:user-invalid:required{
@@ -158,14 +157,14 @@
         font-family:"Figtree",serif;
         font-weight:400;
         font-size:0.75rem;
-        color:rgba(249, 249, 249, 0.6)
+        color:var(--lightgrey,Gainsboro);
     }
 
     #form-submit{
         font-family:"Figtree",serif;
         font-weight:700;
         background:none;
-        border:1px solid var(--frostwhite);
+        border:1px solid var(--redpink,red);
         color:var(--purple,purple);
         font-size:1rem;
         padding:6px 12px;
@@ -207,6 +206,23 @@
 
     #error3.fade-out{
         opacity:0;
+    }
+
+    .themeButton{
+        background:none;
+        border:none;
+    }
+
+    .themeButton:hover{
+        cursor:pointer;
+    }
+    
+    #theme-icon{
+        transition: all .2s ease-in-out; 
+    }
+
+    #theme-icon:hover{
+        transform: scale(1.2);
     }
 }
 
@@ -327,7 +343,7 @@
         font-family:"Figtree",serif;
         font-weight:400;
         font-size:18px;
-        color:rgba(249, 249, 249, 0.6)
+        color:var(--lightgrey,Gainsboro);
     }
 
     textarea{
@@ -352,14 +368,14 @@
         font-family:"Figtree",serif;
         font-weight:400;
         font-size:1rem;
-        color:rgba(249, 249, 249, 0.6)
+        color:var(--lightgrey,Gainsboro);
     }
 
     #form-submit{
         font-family:"Figtree",serif;
         font-weight:700;
         background:none;
-        border:1px solid var(--frostwhite);
+        border:1px solid var(--redpink,red);
         color:var(--purple,purple);
         font-size:18px;
         padding:6px 12px;
@@ -368,6 +384,10 @@
         border-radius:8px;
     }
 
+    #theme-icon{
+        width:36px;
+        height:36px;
+    }
 }
 
 @media only screen and (min-width: 1200px){
@@ -379,8 +399,8 @@
 
     #linkedIn,#github{
         color:var(--frostwhite,white);
-        width:48px;
-        height:48px;
+        width:36px;
+        height:36px;
         display:block;
     }
 
@@ -392,7 +412,7 @@
         font-weight:600;
         border-radius:12px;
         border:2px solid color-mix(in srgb, #9e9e9e, #ababab 50%);
-        padding:10px;
+        padding:6px 8px;
     }
 
   
@@ -478,7 +498,7 @@
         font-family:"Figtree",serif;
         font-weight:400;
         font-size:20px;
-        color:rgba(249, 249, 249, 0.6)
+        color:var(--lightgrey,Gainsboro);
     }
 
     textarea{
@@ -499,20 +519,25 @@
         font-family:"Figtree",serif;
         font-weight:400;
         font-size:18px;
-        color:rgba(249, 249, 249, 0.6)
+        color:var(--lightgrey,Gainsboro);
     }
 
     #form-submit{
         font-family:"Figtree",serif;
         font-weight:700;
         background:none;
-        border:2px solid var(--frostwhite);
+        border:2px solid var(--redpink,red);
         color:var(--purple,purple);
         font-size:20px;
         padding:6px 12px;
         align-self:flex-end;
         flex-basis:auto;
         border-radius:8px;
+    }
+
+    #theme-icon{
+        width:36px;
+        height:36px;
     }
 }
 
@@ -579,7 +604,7 @@
         font-family:"Figtree",serif;
         font-weight:400;
         font-size:24px;
-        color:rgba(249, 249, 249, 0.6)
+        color:var(--lightgrey,Gainsboro);
     }
 
     textarea{
@@ -600,19 +625,24 @@
         font-family:"Figtree",serif;
         font-weight:400;
         font-size:20px;
-        color:rgba(249, 249, 249, 0.6)
+        color:var(--lightgrey,Gainsboro);
     }
 
     #form-submit{
         font-family:"Figtree",serif;
         font-weight:700;
         background:none;
-        border:2px solid var(--frostwhite);
+        border:2px solid var(--redpink,red);
         color:var(--purple,purple);
         font-size:24px;
         padding:6px 12px;
         align-self:flex-end;
         flex-basis:auto;
         border-radius:8px;
+    }
+
+    #theme-icon{
+        width:36px;
+        height:36px;
     }
 }

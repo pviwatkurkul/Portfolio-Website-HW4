@@ -5,10 +5,16 @@
     --frostwhite:#f9f9f9;
     --redpink:#e94560;
     --purple:#9d4edd;
+    --cream:rgba(242, 213, 211, 0.75);
+    --lightgrey:rgba(249, 249, 249, 0.6);
 }
     /*Light Mode Palette*/
     [data-theme="light"]{
-    --background-blue:#f2f2f2;
+    --background-blue:#f8edeb;
     --frostwhite:#0b090a;
-    --dark-blue:#cccccc;
+    --redpink:#800f2f;
+    --dark-blue:#f2f2f2;
+    --cream:#837b7b;
+    --purple:#03045e;
+    --lightgrey:#495057;
     }
