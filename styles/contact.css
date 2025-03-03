@@ -224,6 +224,10 @@
     #theme-icon:hover{
         transform: scale(1.2);
     }
+
+    noscript{
+        color:var(--frostwhite,white);
+    }
 }
 
 @media only screen and (min-width:992px){
