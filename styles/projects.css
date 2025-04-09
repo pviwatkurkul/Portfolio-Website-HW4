@@ -44,57 +44,6 @@
         font-family:"Figtree", serif;
         margin-bottom:6px;
     }
-
-    /* #project-two{
-        padding:25px;
-        border:1px solid var(--frostwhite,white);
-        border-radius:12px;
-        max-width:320px;
-        background-color: var(--dark-blue,navy);  
-    }
-    
-    #project-two > picture{
-        margin-bottom:6px;
-    }
-    #project-two > h4{
-        color:var(--purple,DarkOrchid);
-        font-size:19px;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-        font-weight:700;
-    }
-    #project-two > p{
-        color:var(--frostwhite,white);
-        font-size:16px;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-    }
-
-    #project-three{
-        padding:25px;
-        border:1px solid var(--frostwhite,white);
-        border-radius:12px;
-        max-width:320px;
-        background-color: var(--dark-blue,navy);  
-
-    }
-    
-    #project-three > picture{
-        margin-bottom:6px;
-    }
-    #project-three> h4{
-        color:var(--purple,DarkOrchid);
-        font-size:19px;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-        font-weight:700;
-    }
-    #project-three > p{
-        color:var(--frostwhite,white);
-        font-size:16px;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-    } */
     
     .githubProject{
         display:flex;
@@ -161,58 +110,6 @@
         margin-bottom:6px;
     }
 
-    /* #project-two{
-        padding:25px;
-        border:1px solid var(--frostwhite,white);
-        border-radius:12px;
-        max-width:320px;
-        background-color: var(--dark-blue,navy);  
-        flex: 1 1 320px; 
-    } 
- 
-    #project-two > picture{
-        margin-bottom:6px;
-    }
-    #project-two > h4{
-        color:var(--purple,DarkOrchid);
-        font-size:24px;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-        font-weight:700;
-    }
-    #project-two > p{
-        color:var(--frostwhite,white);
-        font-size:18px;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-    }
-
-    #project-three{
-        padding:25px;
-        border:1px solid var(--frostwhite,white);
-        border-radius:12px;
-        max-width:320px; 
-        background-color: var(--dark-blue,navy);  
-        flex: 1 1 320px;
-    }
-    
-    #project-three > picture{
-        margin-bottom:6px;
-    }
-    #project-three> h4{
-        color:var(--purple,DarkOrchid);
-        font-size:24px;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-        font-weight:700;
-    }
-    #project-three > p{
-        color:var(--frostwhite,white);
-        font-size:18px;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-    } */
-
     .githubHyperLink{
         display:block;
         width:32px;
@@ -229,8 +126,9 @@
     .projectContainer{
         display:flex;
         flex-wrap:wrap;
-        justify-content:space-between;
-        margin:0 15%;
+        gap:40px 6%;
+        margin:0 11%;
+        justify-content:start;
         
     }
     #projects > h2{
@@ -269,57 +167,26 @@
         margin-bottom:6px;
     }
 
-    /* #project-two{
-        padding:25px;
-        border:1px solid var(--frostwhite,white);
-        border-radius:12px;
-        max-width:340px;
-        background-color: var(--dark-blue,navy);  
-        flex: 1 1 340px; 
+    .projectCard picture {
+        display: block;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        margin-bottom: 15px;
+        border-radius: 8px;
     }
     
-    #project-two > picture{
-        margin-bottom:6px;
-    }
-    #project-two > h4{
-        color:var(--purple,DarkOrchid);
-        font-size:1.75rem;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-        font-weight:700;
-    }
-    #project-two > p{
-        color:var(--frostwhite,white);
-        font-size:1.25rem;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-    }
-
-    #project-three{
-        padding:25px;
-        border:1px solid var(--frostwhite,white);
-        border-radius:12px;
-        max-width:340px; 
-        background-color: var(--dark-blue,navy);  
-        flex: 1 1 340px;
+    .projectCard img {
+        width: 100%;
+        height: 100%;
+        object-position: center top; 
+        transition: transform 0.3s ease;
     }
     
-    #project-three > picture{
-        margin-bottom:6px;
+    /* Optional: Add hover effect */
+    .projectCard img:hover {
+        transform: scale(1.05);
     }
-    #project-three> h4{
-        color:var(--purple,DarkOrchid);
-        font-size:1.75rem;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-        font-weight:700;
-    }
-    #project-three > p{
-        color:var(--frostwhite,white);
-        font-size:1.25rem;
-        font-family:"Figtree", serif;
-        margin-bottom:6px;
-    } */
 
     .githubHyperLink{
         display:block;
